@@ -1,0 +1,953 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Title</title>
+    <link href="{% static 'web/css/bootstrap.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'web/css/all.min.css' %}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="{% static 'web/css/owl.carousel.css' %}">
+    <link href="{% static 'web/css/style001.css' %}" type="text/css" rel="stylesheet">
+    <link href="{% static 'web/css/hircana.css' %}" type="text/css" rel="stylesheet">
+</head>
+<body>
+
+<!--begin header -->
+{#<div class="container">#}
+{#    <div class="row">#}
+{#        <div class="col-12">#}
+{#            <span class="header-border-top p-1" style="color: #5e5e5e">#}
+{##}
+{#                 1401 / 08/18#}
+{#                <span class="mx-2 ">#}
+{#                    08 : 18#}
+{#                </span>#}
+{##}
+{#            </span>#}
+{#            <span>#}
+{#                <a href="#" class="header-btn-border">#}
+{#                    استرالیا#}
+{#                </a>#}
+{#            </span>#}
+{#        </div>#}
+{#    </div>#}
+{#</div>#}
+<!--end header -->
+
+
+<!--begin menu -->
+<div class="container">
+
+    <div class="row ">
+
+        <div class="col-lg-2 col-md-4 col-12 mt-sm-2 order-md-1 order-lg-1">
+            <div class="text-center">
+                <a href="index.html">
+                    <img src="{% static 'web/img/logo2.png' %}" class="img-fluid ">
+                </a>
+            </div>
+        </div>
+
+        <div class="col-lg-7 col-md-12 col-12 order-md-3 order-lg-2">
+            <div class="  ">
+                <a href="{{ banner.url}}">
+
+                <img src="{{ banner.image.url }}" class="img-fluid mb-3">
+                </a>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-8 col-12 order-md-2 order-lg-3">
+            <div class="top-search margin-search mt-md-5 mt-lg-4">
+                <form method="get" action="search">
+                    <input name="serch" type="text" class="form-control" placeholder="جستو جو در همه اخبار">
+                    <button type="button" name="button" class="bg-search">
+                        <i class="fa fa-search icon-header-color "></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<nav class="navbar navbar-expand-lg bg-nav-color sticky-top header  mt-2 ">
+    <div class="container">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon">
+                <i class="fa fa-bars"></i>
+            </span>
+        </button>
+        <div class="collapse navbar-collapse" id="main_nav">
+            <ul class="navbar-nav pr-lg-0">
+                {% for key ,value in  model.items %}
+                    <li class="nav-item dropdown ">
+                        <a class="nav-link nav-text-color pb-3" href="#">{{ key }}</a>
+                        <ul class="dropdown-menu fade-up">
+                            {% for j in value %}
+                                <li><a class="dropdown-item" href="index.html">{{ j.name }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div> <!-- navbar-collapse.// -->
+    </div> <!-- container-fluid.// -->
+</nav>
+
+<!--end menu-->
+
+
+<!--begin content-->
+
+<section>
+    <div class="container">
+        <div class="row pb-5">
+            <div class="col-md-6 col-12 mt-3">
+                <div class="img-relative img-hover">
+                    <a href="show-news.html" class="img-top-news-1">
+                        <img src=" {{ top3.0.picture.url }}" class="img-fluid">
+                        <div class="text-box-top-news-1">
+                            <div class="circle-title"></div>
+                            <p class="font_15 p-0 style-top-tittle line-height-text">
+                                {{ top3.0.title }}
+                            </p>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+            <div class="col-md-6 col-12">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="style-text mt-3">
+                            <div class="row">
+                                <div class="col-md-6 col-5">
+                                    <a href="show-news.html" class="img-top-news-2">
+                                        <img src=" {{ top3.1.picture.url }}" class="img-fluid">
+                                    </a>
+                                </div>
+                                <div class="col-md-6 col-7 py-2">
+                                    <p class=" font_13 text-p line-height-text">{{ top3.1.title }}</p>
+                                    <a href="show-news.html" class="text-p">
+                                        <div class="circle-title"></div>
+                                        <p class="font_13 style-tittle line-height-text">{{ top3.1.content| safe |stringformat:".20s" }}
+                                        </p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+
+                        <div class="style-text mt-3">
+                            <div class="row">
+                                <div class="col-md-6 col-5">
+                                    <a href="show-news.html" class="img-top-news-2">
+                                        <img src=" {{ top3.2.picture.url }}" class="img-fluid">
+                                    </a>
+                                </div>
+                                <div class="col-md-6 col-7 py-2">
+                                    <p class=" font_13 text-p line-height-text">{{ top3.2.title }}</p>
+                                    <a href="show-news.html" class="text-p">
+                                        <div class="circle-title"></div>
+                                        <p class="font_13 style-tittle line-height-text">{{ top3.2.content| safe |stringformat:".20s" }}
+                                        </p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="bg-content pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 col-12 pb-2">
+                    <div class="row">
+
+                        {% for i in top8 %}
+                            <div class="col-12">
+                                <div class="border-bottom py-3">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="style-text">
+                                                <div class="row">
+                                                    <div class="col-md-3 col-4 pl-0">
+                                                        <a href="show-news.html" class="img-news-bartar">
+                                                            <img src="{{ i.picture.url }}"
+                                                                 class="img-fluid">
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-9 col-8 mt-2">
+                                                        <a href="show-news.html">
+                                                            <p class="style-tittle text-p font_13 mb-1 line-height-text">
+                                                                {{ i.title }}
+                                                            </p>
+                                                        </a>
+                                                        <p class="text-p font_13 line-height-text">
+                                                            {{ i.content| safe |stringformat:".20s" }}
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="col-lg-6 col-12">
+
+                    <div class="row">
+                        <div class="col-md-6 col-12">
+                            <div class="sticky-top col_z_index">
+                                <div class="bg-content-whit border">
+                                    <ul class="nav nav-tabs aaa">
+                                        <li class="nav-item">
+                                            <a class="nav-link active color-btn font_13" data-toggle="tab" href="#home"
+                                               style="text-align: center">پربازدیدترین ها</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link color-btn font_13" data-toggle="tab" href="#menu1"
+                                               style="text-align: center">پربحث ترین ها</a>
+                                        </li>
+                                    </ul>
+
+                                    <!-- Tab panes -->
+                                    <div class="tab-content">
+                                        {% for i in top10popular %}
+                                            <div class="tab-pane  active " id="home">
+                                                <div class="px-3 pt-2 pb-1">
+                                                    <a href="show-news.html">
+                                                        <div class="circle-titr"></div>
+                                                        <span class="font_12 color-text">
+                  {{ i.title }}
+                                            </span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        {% endfor %}
+                                        {% for i in top10discuss %}
+                                            <div class="tab-pane  active " id="home">
+                                                <div class="px-3 pt-2 pb-1">
+                                                    <a href="show-news.html">
+                                                        <div class="circle-titr"></div>
+                                                        <span class="font_12 color-text">
+                  {{ i.title }}
+                                            </span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        {% endfor %}
+
+                                    </div>
+                                </div>
+{#                                <div class="bg-content-whit border mt-3">#}
+{#                                    <ul class="nav nav-tabs aaa">#}
+{#                                        <li class="nav-item">#}
+{#                                            <a class="nav-link active color-btn font_13" data-toggle="tab" href="#home1"#}
+{#                                               style="text-align: center">برگزیده ها</a>#}
+{#                                        </li>#}
+{#                                        <li class="nav-item">#}
+{#                                            <a class="nav-link color-btn font_13" data-toggle="tab" href="#menu11"#}
+{#                                               style="text-align: center">آخرین اخبار</a>#}
+{#                                        </li>#}
+{#                                    </ul>#}
+
+                                    <!-- Tab panes -->
+{#                                    <div class="tab-content">#}
+{#                                        {% for i in top10choice %}#}
+{#                                            <div class="tab-pane  active " id="home">#}
+{#                                                <div class="px-3 pt-2 pb-1">#}
+{#                                                    <a href="show-news.html">#}
+{#                                                        <div class="circle-titr"></div>#}
+{#                                                        <span class="font_12 color-text">#}
+{#                  {{ i.title }}#}
+{#                                            </span>#}
+{#                                                    </a>#}
+{#                                                </div>#}
+{#                                            </div>#}
+{#                                        {% endfor %}#}
+{#                                        {% for i in top10last %}#}
+{#                                            <div class="tab-pane  active " id="home">#}
+{#                                                <div class="px-3 pt-2 pb-1">#}
+{#                                                    <a href="show-news.html">#}
+{#                                                        <div class="circle-titr"></div>#}
+{#                                                        <span class="font_12 color-text">#}
+{#                  {{ i.title }}#}
+{#                                            </span>#}
+{#                                                    </a>#}
+{#                                                </div>#}
+{#                                            </div>#}
+{#                                        {% endfor %}#}
+{#                                    </div>#}
+{#                                </div>#}
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-12">
+                            <div class="sticky-top col_z_index">
+                                <div class="bg-style-title">
+                                    <div class="text-p">
+                                        <div class="circle-title2"></div>
+                                        <span class="font_10 style-tittle ">
+                                        سوژه روز
+                                    </span>
+                                    </div>
+                                </div>
+
+                                <div class="style-text bg-sozhe-rooz p-3 mt-3">
+                                    <div class="row">
+                                        <div class="col-12 ">
+                                            <a href="show-news.html" class="img-top-news-2 ">
+                                                <img src="{{ top_day_news.picture.url }}"
+                                                     class="img-fluid text-center w-100">
+                                            </a>
+                                        </div>
+
+                                        <div class="col-12 py-2">
+
+                                            <a href="show-news.html" class="text-p mt-2">
+                                                <div class="circle-title"></div>
+                                                <p class="font_12 style-tittle line-height-text">
+                                                    {{ top_day_news.title }}
+                                                </p>
+                                            </a>
+
+
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="bg-style-soozhe">
+                                                        <div class="row">
+                                                            <div class="col-6">
+                                                                <i class="fa fa-eye ml-1" style="float: right"></i>
+                                                                <span class="font_11">{{ top_day_news.views }}</span>
+                                                            </div>
+                                                            <div class="col-6">
+                                                                <div class="text-p" style="float: left">
+                                                                    <i class="fa fa-comment"></i>
+                                                                    <span class="font_11">{{ top_day_views }}</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+{#                                <div class="bg-white">#}
+{#                                    <div class="px-3">#}
+{#                                        <a href="#">#}
+{#                                            <div class="row">#}
+{#                                                <div class="col-12 mt-3 ">#}
+{#                                                    <div class="bg-style-soozhe " style="text-align: center">#}
+{#                                                        <span class="color-see-all">مشاهده همه</span>#}
+{#                                                    </div>#}
+{#                                                </div>#}
+{#                                            </div>#}
+{#                                        </a>#}
+{#                                        <div class="row">#}
+{#                                            <div class="col-12">#}
+{#                                                <div class="py-2">#}
+{#                                                    <a href="show-news.html">#}
+{#                                                        <div class="circle-titr"></div>#}
+{#                                                        <span class="font_13 color-text">#}
+{#                    بازداشت یکی از عوامل اصلی شبکه تروریستی سعودی اینترنشنال در ایران#}
+{#                                                        </span>#}
+{#                                                    </a>#}
+{#                                                </div>#}
+{#                                            </div>#}
+{#                                        </div>#}
+{#                                    </div>#}
+{#                                </div>#}
+
+                                <div class="row">
+                                    <div class="col-12 d-md-inline-block d-none">
+                                        <a href="#">
+                                            <img src="{% static 'web/img/4122_202.jpg' %}"
+                                                 class="img-fluid mt-3 text-center w-100">
+                                        </a>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <div class="bg-darkgray gray-relative">
+
+                                        <span class="mt-3 font_13 pos-abs">
+                                            <span class="float-left pl-5" style="color: #fff">
+                                                سامانه جذب آموزش
+                                            </span>
+
+                                            <span class="float-left mt-2" style="color: #fff">
+                                               خبرگزاری اردیبهشت خبر
+                                            </span>
+                                        </span>
+
+                                            <a href="#" class="style-enter">
+                                                وارد شوید
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="bg-white-content ">
+                <div class="p-3">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="bg-video">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div style="text-align: right">
+                                            <span class="color-teldio font_15">تلدیو</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-6">
+                                        <div style="text-align: left">
+                                            <a href="#">
+                                                <span class="color-video font_15">مشاهده همه ویدیو ها</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-6 order-2">
+                            <div class="row">
+                                <div class="col-12 mt-3">
+                                    <div class="style-text">
+                                        <div class="row">
+                                            <div class="col-4 pl-0">
+                                                <a href="show-news.html" class="img-news-teldio">
+                                                    <img src="{{ top_top_news_with_video.1.picture.url }}"
+                                                         class="img-fluid">
+                                                </a>
+                                            </div>
+                                            <div class="col-8 mt-3">
+                                                <a href="show-news.html">
+                                                    <p class=" text-p font_16 mb-1">
+                                                            {{ top_top_news_with_video.1.title }}
+                                                    </p>
+                                                </a>
+                                                <p class="text-p font_13 mt-3">
+                                                     {{ top_top_news_with_video.1.created_at }}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 mt-3">
+                                    <div class="style-text">
+                                        <div class="row">
+                                            <div class="col-4 pl-0">
+                                                <a href="show-news.html" class="img-news-teldio">
+                                                    <img src="{{ top_top_news_with_video.2.picture.url }}"
+                                                         class="img-fluid">
+                                                </a>
+                                            </div>
+                                            <div class="col-8 mt-3">
+                                                <a href="show-news.html">
+                                                    <p class=" text-p font_16 mb-1">
+                                                            {{ top_top_news_with_video.2.title }}
+                                                    </p>
+                                                </a>
+                                                <p class="text-p font_13 mt-3">
+                                                     {{ top_top_news_with_video.2.created_at }}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 mt-3">
+                                    <div class="style-text">
+                                        <div class="row">
+                                            <div class="col-4 pl-0">
+                                                <a href="show-news.html" class="img-news-teldio">
+                                                    <img src="{{ top_top_news_with_video.3.picture.url }}"
+                                                         class="img-fluid">
+                                                </a>
+                                            </div>
+                                            <div class="col-8 mt-3">
+                                                <a href="show-news.html">
+                                                    <p class=" text-p font_16 mb-1">
+                                                            {{ top_top_news_with_video.3.title }}
+                                                    </p>
+                                                </a>
+                                                <p class="text-p font_13 mt-3">
+                                                     {{ top_top_news_with_video.3.created_at }}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 mt-3">
+                                    <div class="style-text">
+                                        <div class="row">
+                                            <div class="col-4 pl-0">
+                                                <a href="show-news.html" class="img-news-teldio">
+                                                    <img src="{{ top_top_news_with_video.4.picture.url }}"
+                                                         class="img-fluid">
+                                                </a>
+                                            </div>
+                                            <div class="col-8 mt-3">
+                                                <a href="show-news.html">
+                                                    <p class=" text-p font_16 mb-1">
+                                                            {{ top_top_news_with_video.4.title }}
+                                                    </p>
+                                                </a>
+                                                <p class="text-p font_13 mt-3">
+                                                     {{ top_top_news_with_video.4.created_at }}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 order-1">
+                            <div class="row">
+                                <div class="col-12 mt-3">
+                                    <div class="style-text">
+                                        <div class="row">
+                                            <div class="col-lg-12 col-md-6 col-12">
+                                                <a href="show-news.html" class="img-news-teldio">
+                                                    <img src="{{ top_top_news_with_video.0.picture.url }}"
+                                                         class="img-fluid">
+                                                </a>
+                                            </div>
+                                            <div class="col-lg-12 col-md-6 col-12 mt-3">
+                                                <a href="show-news.html">
+                                                    <div class="circle-title"></div>
+                                                    <p class=" text-p font_16 mb-1 style-tittle">
+                                                         {{ top_top_news_with_video.0.title }}
+                                                    </p>
+                                                </a>
+                                                <p class="text-p font_13 mt-2" style="color: #000">
+                                                     {{ top_top_news_with_video.0.title|stringformat:".20s" }}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+{#            <div class="mt-5">#}
+{#                <div class="border-bottom ">#}
+{#                    <div class="p-3">#}
+{#                        <div class="row">#}
+{#                            <div class="col-6">#}
+{#                                <div style="text-align: right">#}
+{#                                    <span class="font_15 bg-resane">چند رسانه ای</span>#}
+{#                                </div>#}
+{#                            </div>#}
+{##}
+{#                            <div class="col-6">#}
+{#                                <div style="text-align: left">#}
+{#                                    <a href="#">#}
+{#                                        <span class="font_15" style="color: #e00000">مشاهده همه ویدیو ها</span>#}
+{#                                    </a>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="row">#}
+{#                    <div class="col-lg-6 col-12">#}
+{#                        <div class="row">#}
+{#                            <div class="col-12 mt-3">#}
+{#                                <div class="style-text">#}
+{#                                    <div class="row">#}
+{#                                        <div class="col-lg-12 col-md-6 col-12">#}
+{#                                            <a href="show-news.html" class="img-news-teldio">#}
+{#                                                <img src="{% static 'web/img/16852769_167.jpg' %}" class="img-fluid">#}
+{#                                            </a>#}
+{##}
+{#                                        </div>#}
+{#                                        <div class="col-lg-12 col-md-6 col-12 mt-3">#}
+{#                                            <a href="show-news.html">#}
+{#                                                <div class="circle-title"></div>#}
+{##}
+{#                                                <p class=" text-p font_16 mb-1 style-tittle">#}
+{#                                                    بخش‌هایی از بغداد زیر آب رفت + فیلم#}
+{#                                                </p>#}
+{#                                            </a>#}
+{#                                            <p class="text-p font_13" style="color: #000">#}
+{#                                                در پی بارش شدید باران، آبگرفتگی بغداد، دیالی و مناطقی در مرکز عراق را#}
+{#                                                فراگرفت.#}
+{#                                            </p>#}
+{#                                        </div>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <div class="col-lg-6 col-12">#}
+{#                        <div class="row">#}
+{#                            <div class="col-12 mt-3">#}
+{#                                <div class="style-text">#}
+{#                                    <div class="row">#}
+{#                                        <div class="col-4 pl-0">#}
+{#                                            <a href="show-news.html" class="img-news-teldio">#}
+{#                                                <img src="{% static 'web/img/16851627_731.jpg' %}" class="img-fluid">#}
+{#                                            </a>#}
+{#                                        </div>#}
+{#                                        <div class="col-8 mt-3">#}
+{#                                            <a href="show-news.html">#}
+{#                                                <p class=" text-p font_16 mb-1 line-height-text">#}
+{#                                                    بیش از ۲۰۰ هزار تن کالا از پایانه مرزی میلک به افغانستان صادر شده#}
+{#                                                    است + فیلم#}
+{#                                                </p>#}
+{#                                            </a>#}
+{#                                            <p class="text-p font_13 mt-3">#}
+{#                                                20.آبان.1401#}
+{#                                            </p>#}
+{#                                        </div>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                        <div class="row">#}
+{#                            <div class="col-12 mt-3">#}
+{#                                <div class="style-text">#}
+{#                                    <div class="row">#}
+{#                                        <div class="col-4 pl-0">#}
+{#                                            <a href="show-news.html" class="img-news-teldio">#}
+{#                                                <img src="{% static 'web/img/16851486_747.jpg' %}" class="img-fluid">#}
+{#                                            </a>#}
+{#                                        </div>#}
+{#                                        <div class="col-8 mt-3">#}
+{#                                            <a href="show-news.html">#}
+{#                                                <p class=" text-p font_16 mb-1 line-height-text">#}
+{#                                                    سوال درمورد سلاح‌های کشتار جمعی آمریکا موجب بازداشت یک خبرنگار شد +#}
+{#                                                    فیلم#}
+{#                                                </p>#}
+{#                                            </a>#}
+{#                                            <p class="text-p font_13 mt-3">#}
+{#                                                20.آبان.1401#}
+{#                                            </p>#}
+{#                                        </div>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                        <div class="row">#}
+{#                            <div class="col-12 mt-3">#}
+{#                                <div class="style-text">#}
+{#                                    <div class="row">#}
+{#                                        <div class="col-4 pl-0">#}
+{#                                            <a href="show-news.html" class="img-news-teldio">#}
+{#                                                <img src="{% static 'web/img/16851451_636.jpg' %}" class="img-fluid">#}
+{#                                            </a>#}
+{##}
+{#                                        </div>#}
+{#                                        <div class="col-8  mt-3">#}
+{##}
+{#                                            <a href="show-news.html">#}
+{#                                                <p class=" text-p font_16 mb-1 line-height-text">#}
+{#                                                    اعتصاب گسترده بازاریان در کامیاران! + فیلم#}
+{#                                                </p>#}
+{#                                            </a>#}
+{#                                            <p class="text-p font_13 mt-3">#}
+{#                                                20.آبان.1401#}
+{#                                            </p>#}
+{#                                        </div>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                        <div class="row">#}
+{#                            <div class="col-12 mt-3">#}
+{#                                <div class="style-text">#}
+{#                                    <div class="row">#}
+{#                                        <div class="col-4 pl-0">#}
+{#                                            <a href="show-news.html" class="img-news-teldio">#}
+{#                                                <img src="{% static 'web/img/16851440_907.jpg' %}" class="img-fluid">#}
+{#                                            </a>#}
+{#                                        </div>#}
+{#                                        <div class="col-8  mt-3">#}
+{#                                            <a href="show-news.html">#}
+{#                                                <p class=" text-p font_16 mb-1 line-height-text">#}
+{#                                                    هشدار سازمان اطلاعات سپاه در مورد تماس‌های مشکوک + فیلم#}
+{#                                                </p>#}
+{#                                            </a>#}
+{#                                            <p class="text-p font_13 mt-3">#}
+{#                                                20.آبان.1401#}
+{#                                            </p>#}
+{#                                        </div>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+
+            <div class="mt-5">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-6">
+                                <div style="text-align: right">
+                                    <span class="color-ax-rooz font_20">عکس روز</span>
+                                </div>
+                            </div>
+
+                            <div class="col-6">
+                                <div style="text-align: left">
+                                    <a href="#">
+                                        <span class="color-pic font_15">مشاهده همه تصاویر</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    {% for i in top_top_news_with_image %}
+                    <div class="col-md-3 col-12">
+                        <div class="row">
+                            <div class="col-12 mt-3">
+                                <div class="style-text">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <a href="show-news.html" class="img-news-teldio">
+                                                <img src="{{ i.picture.url }}"
+                                                     class="img-fluid w-100">
+                                            </a>
+
+                                        </div>
+                                        <div class="col-12  mt-3">
+
+                                            <a href="show-news.html">
+                                                <div class="circle-title"></div>
+
+                                                <p class=" text-p font_14 mb-1 style-tittle line-height-text">
+                                                    {{ i.title }}
+                                                </p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--end content-->
+
+
+<!--begin footer-->
+
+{#<section class="bg-color-gray ">#}
+{#    <div class="container">#}
+{#        <div class="row">#}
+{#            <div class="col-md-12 d-md-inline-block d-none">#}
+{#                <nav class="navbar navbar-expand-md navbar-dark ">#}
+{#                    <button class="navbar-toggler" type="button" data-toggle="collapse"#}
+{#                            data-target="#collapsibleNavbar">#}
+{#                        <span class="navbar-toggler-icon d-none"></span>#}
+{#                    </button>#}
+{##}
+{#                    <div class="navbar-brand d-none " href="#">#}
+{#                        <i class="fa fa-search mt-2 ml-2 red_social"></i>#}
+{#                    </div>#}
+{##}
+{#                    <div class="collapse navbar-collapse">#}
+{#                        <ul class="footer_menu navbar-nav font_13 pr-0">#}
+{#                            <li class="nav-item">#}
+{#                                <a class="nav-link active" href="#" style="color: #000">پخش زنده</a>#}
+{#                            </li>#}
+{#                            <li class="nav-item color-menu-footer">#}
+{#                                <a class="nav-link " href="#" style="color: #000">آرشیو</a>#}
+{#                            </li>#}
+{#                            <li class="nav-item">#}
+{#                                <a class="nav-link " href="#" style="color: #000">پیوند ها</a>#}
+{#                            </li>#}
+{#                            <li class="nav-item">#}
+{#                                <a class="nav-link " href="#" style="color: #000">خبرنامه</a>#}
+{#                            </li>#}
+{#                            <li class="nav-item">#}
+{#                                <a class="nav-link " href="#" style="color: #000">آب و هوا</a>#}
+{#                            </li>#}
+{#                            <li class="nav-item">#}
+{#                                <a class="nav-link " href="#" style="color: #000">اوقات شرعی</a>#}
+{#                            </li>#}
+{#                            <li class="nav-item">#}
+{#                                <a class="nav-link " href="#" style="color: #000">نظرسنجی </a>#}
+{#                            </li>#}
+{#                            <li class="nav-item">#}
+{#                                <a class="nav-link " href="about-us.html" style="color: #000">درباره ما </a>#}
+{#                            </li>#}
+{#                            <li class="nav-item">#}
+{#                                <a class="nav-link " href="contact.html" style="color: #000">تماس با ما </a>#}
+{#                            </li>#}
+{#                            <li class="nav-item">#}
+{#                                <a class="nav-link " href="#" style="color: #000">نقشه سایت </a>#}
+{#                            </li>#}
+{#                            <li class="nav-item">#}
+{#                                <a class="nav-link " href="#" style="color: #000">RSS </a>#}
+{#                            </li>#}
+{#                        </ul>#}
+{#                    </div>#}
+{##}
+{#                    <div class="navbar-brand d-none d-lg-inline-block ">#}
+{##}
+{#                        <div class="top-search-footer ">#}
+{#                            <form method="get" action="search">#}
+{#                                <input name="serch" type="text" class="form-control" placeholder="جستجو">#}
+{#                                <button type="button" name="button" class="bg-search">#}
+{#                                    <i class="fa fa-search icon-header-color "></i>#}
+{#                                </button>#}
+{#                            </form>#}
+{#                        </div>#}
+{##}
+{#                    </div>#}
+{#                </nav>#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
+{#</section>#}
+
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 d-md-inline-block d-none ">
+                <div class="row">
+
+                {% for key ,value in  model.items %}
+                    <div class="col-2 mt-5">
+                        <a href="category.html" class="style-title-footer">
+                          {{ key }}
+                        </a>
+                        <ul class="px-0 mt-2 line-height-footer" style="list-style: none">
+                            {% for j in value %}
+                            <li class="">
+                                <a href="#" class="hover-txt-footer">
+                                   {{ j.name }}
+                                </a>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                {% endfor %}
+                </div>
+            </div>
+        </div>
+
+        <div class="border-top-footer">
+            <div class="row">
+
+                <div class="col-md-6 col-12 text-md-right text-center">
+                    <div class="style-li">
+                        <ul style="list-style: none" class="p-0">
+                            <li>
+                                <a href="{{ settings.twitter }}" class="">
+                                    <i class="fab fa-twitter color-media"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ settings.instagram }}" class="">
+                                    <i class="fab fa-instagram color-media"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ settings.telegram }}" class="">
+                                    <i class="fab fa-telegram color-media"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ settings.whatsapp }}" class="">
+                                    <i class="fab fa-whatsapp color-media"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-12 text-center ">
+                    <div style="text-align: left" class="mt-1">
+                        <span class="font_12">
+                            THE WORLD'S LARGEST
+                            <span style="color: #e00000">
+                                PERSIAN
+                            </span>
+                            LANGUAGE NEWS AGENCY
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="bg-footer">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-12  col-md-6">
+                    <div class="text-center text-md-right font_13 font-weight-bold">
+
+                        کلیه حقوق این سایت متعلق به خبرگزاری اردیبهشت خبر بوده و استفاده از مطالب آن با ذکر منبع بلامانع
+                        است.
+
+                    </div>
+                </div>
+
+                <div class="col-12  col-md-6">
+                    <div class="text-center text-md-left font_13 font-weight-bold mt-2 mt-md-0">
+
+                        طراحی وتولید توسط
+                        <a href="https://hircana.com">هیرکانا</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--end footer-->
+
+
+<div class="scrolltop" onclick="scroll_top()">
+    <i class="fa fa-chevron-up arrow_icon" style="color: #333"></i>
+</div>
+
+
+<script src="{% static 'web/js/jquery.2.1.0.min.js' %}" type="text/javascript"></script>
+<script src="{% static 'web/js/popper.min.js' %}" type="text/javascript"></script>
+<script src="{% static 'web/js/bootstrap.min.js' %}" type="text/javascript"></script>
+<script src="{% static 'web/js/bootstrap.bundle.min.js' %}" type="text/javascript"></script>
+<script src="{% static 'web/js/owl.carousel.js' %}"></script>
+<script src="{% static 'web/js/js.js' %}" type="text/javascript"></script>
+
+</body>
+</html>

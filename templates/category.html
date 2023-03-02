@@ -1,0 +1,1773 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Title</title>
+
+    <link href="{% static 'web/css/bootstrap.css' %}"  rel="stylesheet" type="text/css">
+    <link href="{% static 'web/css/all.min.css' %}"  rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="{% static 'web/css/owl.carousel.css' %}" >
+    <link href="{% static 'web/css/style001.css' %}"  type="text/css" rel="stylesheet">
+    <link href="{% static 'web/css/hircana.css' %}"  type="text/css" rel="stylesheet">
+
+
+
+
+</head>
+<body >
+
+<!--begin header -->
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <span class="header-border-top p-1" style="color: #5e5e5e">
+
+                 1401 / 08/18
+                <span class="mx-2 ">
+                    08 : 18
+                </span>
+
+            </span>
+            <span>
+                <a href="#" class="header-btn-border">
+                    استرالیا
+                </a>
+            </span>
+        </div>
+    </div>
+</div>
+<!--end header -->
+
+
+
+
+<!--begin menu -->
+<div class="container">
+
+    <div class="row ">
+
+        <div class="col-lg-2 col-md-4 col-12 mt-sm-2 order-md-1 order-lg-1">
+            <div class="text-center">
+                <a href="index.html">
+                    <img src="{% static 'web/img/1111.png' %}" class="img-fluid "  >
+                </a>
+            </div>
+        </div>
+
+        <div class="col-lg-7 col-md-12 col-12 order-md-3 order-lg-2">
+            <div class="  ">
+                <img src="{% static 'web/img/orginal_1657783529.jpg' %}"class="img-fluid mb-3">
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-8 col-12 order-md-2 order-lg-3">
+            <div class="top-search margin-search mt-md-5 mt-lg-4">
+                <form method="get" action="search">
+                    <input name="serch" type="text" class="form-control" placeholder="جستو جو در همه اخبار">
+                    <button type="button" name="button" class="bg-search">
+                        <i class="fa fa-search icon-header-color "></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<nav class="navbar navbar-expand-lg bg-nav-color sticky-top header  mt-2 ">
+    <div class="container">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav"  aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon">
+                <i class="fa fa-bars"></i>
+            </span>
+        </button>
+        <div class="collapse navbar-collapse" id="main_nav">
+            <ul class="navbar-nav pr-lg-0">
+                <li class="nav-item dropdown ">
+                    <a class="nav-link nav-text-color pb-3" href="#" >صفحات</a>
+                    <ul class="dropdown-menu fade-up">
+                        <li><a class="dropdown-item" href="index.html"> صفحه اصلی</a></li>
+                        <li><a class="dropdown-item" href="category.html">دسته بندی ها </a></li>
+                        <li><a class="dropdown-item" href="show-news.html"> نمایش خبر  </a></li>
+                        <li><a class="dropdown-item" href="contact.html"> ارتباط با ما  </a></li>
+                        <li><a class="dropdown-item" href="about-us.html"> درباره ی ما  </a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown ">
+                    <a class="nav-link  nav-text-color pb-3" href="category.html" >بین الملل</a>
+                    <ul class="dropdown-menu fade-up">
+                        <li><a class="dropdown-item" href="#">ایران</a></li>
+                        <li><a class="dropdown-item" href="#"> کافه بین الملل </a></li>
+                        <li><a class="dropdown-item" href="#"> عناوین کل اخبار بین الملل </a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown ">
+                    <a class="nav-link  nav-text-color pb-3" href="category.html" >ورزشی</a>
+                    <ul class="dropdown-menu fade-up">
+                        <li><a class="dropdown-item" href="#">توپ و تور</a></li>
+                        <li><a class="dropdown-item" href="#">پایه آبی </a></li>
+                        <li><a class="dropdown-item" href="#">فوتبال و فوتسال</a></li>
+                        <li><a class="dropdown-item" href="#">کشتی و رزمی </a></li>
+                        <li><a class="dropdown-item" href="#">عناوین کل اخبار ورزشی </a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown ">
+                    <a class="nav-link  nav-text-color pb-3" href="category.html"> اجتماعی </a>
+                    <ul class="dropdown-menu fade-up">
+                        <li><a class="dropdown-item" href="#">محیط زیست</a></li>
+                        <li><a class="dropdown-item" href="#">رفاه و تعاون</a></li>
+                        <li><a class="dropdown-item" href="#">عناوین کل اخبار اجتماعی</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown ">
+                    <a class="nav-link nav-text-color pb-3" href="category.html"> اقتصادی  </a>
+                    <ul class="dropdown-menu fade-up">
+                        <li><a class="dropdown-item" href="#">بانک و بیمه</a></li>
+                        <li><a class="dropdown-item" href="#">بورس</a></li>
+                        <li><a class="dropdown-item" href="#">راه و شهرسازی</a></li>
+                        <li><a class="dropdown-item" href="#">عناوین کل اخبار اقتصادی</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown ">
+                    <a class="nav-link nav-text-color pb-3" href="category.html">فرهنگی هنری  </a>
+                    <ul class="dropdown-menu fade-up">
+                        <li><a class="dropdown-item" href="#"> رادیو و تلویزیون</a></li>
+                        <li><a class="dropdown-item" href="#">سینما و تئاتر  </a></li>
+                        <li><a class="dropdown-item" href="#">عناوین کل اخبار فرهنگی و هنری </a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown ">
+                    <a class="nav-link nav-text-color pb-3" href="category.html"> علمی و پزشکی  </a>
+                    <ul class="dropdown-menu fade-up">
+                        <li><a class="dropdown-item" href="#">دانلود نرم افزار</a></li>
+                        <li><a class="dropdown-item" href="#"> کلینیک </a></li>
+                        <li><a class="dropdown-item" href="#">عناوین کل اخبار علمی و پزشکی </a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown ">
+                    <a class="nav-link nav-text-color pb-3" href="category.html"> فیلم و صوت  </a>
+                    <ul class="dropdown-menu fade-up">
+                        <li><a class="dropdown-item" href="#"> آموزشی </a></li>
+                        <li><a class="dropdown-item" href="#">گزارش استان ها </a></li>
+                        <li><a class="dropdown-item" href="#"> عناوین کل اخبار فیلم و صوت </a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown ">
+                    <a class="nav-link nav-text-color pb-3" href="category.html"> عکس  </a>
+                    <ul class="dropdown-menu fade-up">
+                        <li><a class="dropdown-item" href="#">خبری</a></li>
+                        <li><a class="dropdown-item" href="#">مستند</a></li>
+                        <li><a class="dropdown-item" href="#"> عناوین کل اخبار عکس  </a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown ">
+                    <a class="nav-link nav-text-color pb-3" href="category.html"> استان ها  </a>
+                    <ul class="dropdown-menu fade-up">
+                        <li><a class="dropdown-item" href="#">گلستان</a></li>
+                        <li><a class="dropdown-item" href="#"> تهران </a></li>
+                        <li><a class="dropdown-item" href="#">عناوین کل اخبار استان ها</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown ">
+                    <a class="nav-link nav-text-color pb-3" href="category.html">شهروند خبر نگار</a>
+                    <ul class="dropdown-menu fade-up">
+                        <li><a class="dropdown-item" href="#"> شهروند خبرنگار</a></li>
+                        <li><a class="dropdown-item" href="#"> عناوین کل اخبار شهروند خبر نگار</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown ">
+                    <a class="nav-link nav-text-color pb-3" href="category.html">وب گردی  </a>
+                    <ul class="dropdown-menu fade-up">
+                        <li><a class="dropdown-item" href="#"> خواندنی ها</a></li>
+                        <li><a class="dropdown-item" href="#"> مجله سرگرمی </a></li>
+                        <li><a class="dropdown-item" href="#">اخبار داغ</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div> <!-- navbar-collapse.// -->
+    </div> <!-- container-fluid.// -->
+</nav>
+
+<!--end menu-->
+
+
+
+<!--begin content-->
+
+<section>
+    <div class="container">
+        <div class="row pb-5">
+            <div class="col-md-6 col-12 mt-3">
+                <div class="img-relative img-hover">
+                    <a href="show-news.html" class="img-top-news-1">
+                        <img src="{% static 'web/img/16866531_875.jpeg' %}" class="img-fluid">
+                        <div class="text-box-top-news-1">
+                            <div class="circle-title"></div>
+                            <p class="font_15 p-0 style-top-tittle line-height-text">
+                                دوربین هاى طرح ترافیک اورهال شدند/ تعداد دوربین در تهران کم است
+                            </p>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+            <div class="col-md-6 col-12">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="style-text mt-3">
+                            <div class="row">
+                                <div class="col-md-6 col-5">
+                                    <a href="show-news.html" class="img-top-news-2">
+                                        <img src="{% static 'web/img/16867526_722.jpeg' %}" class="img-fluid">
+                                    </a>
+                                </div>
+                                <div class="col-md-6 col-7 py-2">
+                                    <p class=" font_13 text-p line-height-text">شهردار تهران در گفت و گو با خبرگزاری اردیبهشت خبر مطرح کرد:</p>
+                                    <a href="show-news.html" class="text-p">
+                                        <div class="circle-title"></div>
+                                        <p class="font_13 style-tittle line-height-text">
+                                            دوربین هاى طرح ترافیک اورهال شدند/ تعداد دوربین در تهران کم است
+                                        </p>
+                                    </a>
+                                    <p class="font_13 text-p line-height-text">
+                                        زاکانی گفت: تعداد دوربین‌های طرح ترافیک در تهران افزایش پیدا کرده و دوربین‌های خراب اورهال شدند...
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="style-text mt-3">
+                            <div class="row">
+                                <div class="col-md-6 col-5">
+                                    <a href="show-news.html" class="img-top-news-2">
+                                        <img src="{% static 'web/img/16866532_616.jpg' %}"class="img-fluid">
+                                    </a>
+                                </div>
+
+                                <div class="col-md-6 col-7 py-2">
+
+                                    <a href="show-news.html" class="text-p mt-2">
+                                        <div class="circle-title"></div>
+                                        <p class="font_13 style-tittle line-height-text">
+                                            بازداشت یکی از عوامل اصلی شبکه تروریستی سعودی اینترنشنال در ایران
+                                        </p>
+                                    </a>
+                                    <p class="font_13 text-p line-height-text">
+                                        الهام افکاری، از عوامل اصلی شبکه سعودی ایران اینترنشنال حین فرار از کشور توسط وزارت اطلاعات دستگیر شد...
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="bg-content pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9 col-md-12 ">
+
+                    <div class="row">
+                        <div class="col-md-12 ">
+                            <div class="border-title-cat">
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <div class="bg-subject">
+                                            <div class="text-center style-subject ">
+                                                <span >موضوعات </span>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-10">
+                                        <div class="style-li overflow-style">
+                                            <ul class="mt-3 pr-0">
+                                                <li class="style-ul ml-3">
+                                                    <a href="#">
+                                                        <div class="circle-subject"></div>
+                                                        <span class="font_14 color-subject">جام جهانی 2022 قطر</span>
+                                                    </a>
+                                                </li>
+                                                <li class="style-ul ml-3">
+                                                    <a href="#">
+                                                        <div class="circle-subject"></div>
+                                                        <span class="font_14 color-subject">روزنامه های ورزشی</span>
+                                                    </a>
+                                                </li>
+                                                <li class="style-ul ml-3">
+                                                    <a href="#">
+                                                        <div class="circle-subject"></div>
+                                                        <span class="font_14 color-subject">تیم فوتبال پرسپولیس</span>
+                                                    </a>
+                                                </li>
+                                                <li class="style-ul ml-3">
+                                                    <a href="#">
+                                                        <div class="circle-subject"></div>
+                                                        <span class="font_14 color-subject">تیم فوتبال استقلال</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-8 ">
+                            <div class="row ">
+                                <div class="col-12">
+                                    <div class="border-bottom py-3">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="style-text">
+                                                    <div class="row">
+                                                        <div class="col-3 pl-0">
+                                                            <a href="show-news.html" class="img-news-bartar">
+                                                                <img src="{% static 'web/img/16844818_421.jpg' %}"class="img-fluid">
+                                                            </a>
+
+                                                        </div>
+                                                        <div class="col-9  mt-2 line-height-text">
+                                                            <p class=" font_13 text-p mb-1">شهردار تهران در گفت و گو با خبرگزاری اردیبهشت خبر مطرح کرد:</p>
+
+                                                            <a href="show-news.html">
+                                                                <p class="style-tittle text-p font_13 mb-1 line-height-text">
+                                                                    پیش بینی کاکا از قهرمان و پدیده جام جهانی
+                                                                </p>
+                                                            </a>
+                                                            <p class="text-p font_13 line-height-text">
+                                                                ستاره سابق برزیل پیش بینی خود را از شانس اول قهرمانی و پدیده جام جهانی ۲۰۲۲ اعلام کرد...
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="border-bottom py-3">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="style-text">
+                                                    <div class="row">
+                                                        <div class="col-3 pl-0">
+                                                            <a href="show-news.html" class="img-news-bartar">
+                                                                <img src="{% static 'web/img/16845521_780.jpg' %}"class="img-fluid">
+                                                            </a>
+
+                                                        </div>
+                                                        <div class="col-9  mt-2">
+
+
+                                                            <a href="show-news.html">
+                                                                <p class="style-tittle text-p font_13 line-height-text mb-1">
+                                                                    اکتشافات مهم تاریخی که جهان را در حیرت فرو برد + تصاویر
+                                                                </p>
+                                                            </a>
+                                                            <p class="text-p font_13 line-height-text">
+                                                                از لشکر سفالین گرفته تا انسان فلورسی، این‌ها از جمله اکتشافاتی هستند که متخصصان معتقدند حتی جایگاهی مهمتر از مقبره توت‌عنخ‌آمون دارند....
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="border-bottom py-3">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="style-text">
+                                                    <div class="row">
+                                                        <div class="col-3 pl-0">
+                                                            <a href="show-news.html" class="img-news-bartar">
+                                                                <img src="{% static 'web/img/16844954_295.jpg' %}"class="img-fluid">
+                                                            </a>
+
+                                                        </div>
+                                                        <div class="col-9  mt-2">
+
+                                                            <a href="show-news.html">
+                                                                <p class="style-tittle text-p font_13 line-height-text mb-1">
+
+                                                                    ورود سامانه جدید بارشی به کشور
+
+                                                                </p>
+                                                            </a>
+                                                            <p class="text-p font_13 line-height-text">
+                                                                براساس نقشه‌های هواشناسی با ورود سامانه بارشی از جنوب غرب، بارش‌ها در غرب و جنوب غرب تشدید می‌شود....
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="border-bottom py-3">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="style-text">
+                                                    <div class="row">
+                                                        <div class="col-3 pl-0">
+                                                            <a href="show-news.html" class="img-news-bartar">
+                                                                <img src="{% static 'web/img/16844900_986.jpg' %}"class="img-fluid">
+                                                            </a>
+
+                                                        </div>
+                                                        <div class="col-9 mt-2">
+                                                            <p class=" font_13 text-p mb-1 line-height-text">خبرگزاری اردیبهشت خبر گزارش می دهد؛</p>
+
+                                                            <a href="show-news.html">
+                                                                <p class="style-tittle text-p font_13 mb-1 line-height-text">
+                                                                    بابلرود کشتی ها را می بلعد + فیلم
+                                                                </p>
+                                                            </a>
+                                                            <p class="text-p font_13 line-height-text">
+
+                                                                ناقوس مرگ بابلرود یکی از رود‌های بزرگ شمال کشور با انباشت ۲ میلیون متر مکعب رسوبات نواخته شده است.
+                                                                ....
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="border-bottom py-3">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="style-text">
+                                                    <div class="row">
+                                                        <div class="col-3 pl-0">
+                                                            <a href="show-news.html" class="img-news-bartar">
+                                                                <img src="{% static 'web/img/16846059_100.jpg' %}"class="img-fluid">
+                                                            </a>
+
+                                                        </div>
+                                                        <div class="col-9 mt-2">
+
+                                                            <a href="show-news.html">
+                                                                <p class="style-tittle text-p font_13 line-height-text mb-1">
+                                                                    شوخی کی روش با وزیر ورزش
+                                                                </p>
+                                                            </a>
+                                                            <p class="text-p font_13 line-height-text">
+                                                                کارلوس کی روش در حاشیه اردوی تیم ملی که با حضور سجادی برگزار شد با وزیر ورزش و‌ ملی پوشان شوخی کرد...
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="border-bottom py-3">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="style-text">
+                                                    <div class="row">
+                                                        <div class="col-3 pl-0">
+                                                            <a href="show-news.html" class="img-news-bartar">
+                                                                <img src="{% static 'web/img/16844900_986.jpg' %}"class="img-fluid">
+                                                            </a>
+
+                                                        </div>
+                                                        <div class="col-9 mt-2">
+                                                            <p class=" font_13 line-height-text text-p mb-1">خبرگزاری اردیبهشت خبر گزارش می دهد؛</p>
+
+                                                            <a href="show-news.html">
+                                                                <p class="style-tittle text-p font_13 line-height-text mb-1">
+                                                                    بابلرود کشتی ها را می بلعد + فیلم
+                                                                </p>
+                                                            </a>
+                                                            <p class="text-p font_13 line-height-text">
+
+                                                                ناقوس مرگ بابلرود یکی از رود‌های بزرگ شمال کشور با انباشت ۲ میلیون متر مکعب رسوبات نواخته شده است.
+                                                                ....
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="border-bottom py-3">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="style-text">
+                                                    <div class="row">
+                                                        <div class="col-3 pl-0">
+                                                            <a href="show-news.html" class="img-news-bartar">
+                                                                <img src="{% static 'web/img/16846059_100.jpg' %}" class="img-fluid">
+                                                            </a>
+
+                                                        </div>
+                                                        <div class="col-9 mt-2">
+
+                                                            <a href="show-news.html">
+                                                                <p class="style-tittle text-p line-height-text font_13 mb-1">
+                                                                    شوخی کی روش با وزیر ورزش
+                                                                </p>
+                                                            </a>
+                                                            <p class="text-p line-height-text font_13">
+                                                                کارلوس کی روش در حاشیه اردوی تیم ملی که با حضور سجادی برگزار شد با وزیر ورزش و‌ ملی پوشان شوخی کرد...
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="border-bottom py-3">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="style-text">
+                                                    <div class="row">
+                                                        <div class="col-3 pl-0">
+                                                            <a href="show-news.html" class="img-news-bartar">
+                                                                <img src="{% static 'web/img/16845811_405.jfif' %}" class="img-fluid">"
+                                                            </a>
+
+                                                        </div>
+                                                        <div class="col-9 mt-2">
+                                                            <p class=" font_13 line-height-text text-p mb-1">کارشناس اروپایی:</p>
+
+                                                            <a href="show-news.html">
+                                                                <p class="style-tittle text-p font_13 line-height-text mb-1">
+                                                                    انتخابات هم نمی‌تواند اختلافات ریشه‌ای در آمریکا را حل و فصل کند
+                                                                </p>
+                                                            </a>
+                                                            <p class="text-p font_13 line-height-text">
+
+                                                                انتخابات میان دوره‌ای آمریکا به خوبی نشان داد که ریشه اختلافات در داخل این کشور پیچیده‌تر از آن است که به راحتی حل شود.
+                                                                ...
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="border-bottom py-3">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="style-text">
+                                                    <div class="row">
+                                                        <div class="col-3 pl-0">
+                                                            <a href="show-news.html" class="img-news-bartar">
+                                                                <img src="{% static 'web/img/16844818_421.jpg' %}"class="img-fluid">
+                                                            </a>
+
+                                                        </div>
+                                                        <div class="col-9 mt-2">
+                                                            <p class=" font_13 line-height-text text-p mb-1">شهردار تهران در گفت و گو با خبرگزاری اردیبهشت خبر مطرح کرد:</p>
+
+                                                            <a href="show-news.html">
+                                                                <p class="style-tittle text-p font_13 line-height-text mb-1">
+                                                                    پیش بینی کاکا از قهرمان و پدیده جام جهانی
+                                                                </p>
+                                                            </a>
+                                                            <p class="text-p font_13 line-height-text">
+                                                                ستاره سابق برزیل پیش بینی خود را از شانس اول قهرمانی و پدیده جام جهانی ۲۰۲۲ اعلام کرد...
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="border-bottom py-3">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="style-text">
+                                                    <div class="row">
+                                                        <div class="col-3 pl-0">
+                                                            <a href="show-news.html" class="img-news-bartar">
+                                                                <img src="{% static 'web/img/16845521_780.jpg' %}"class="img-fluid">
+                                                            </a>
+
+                                                        </div>
+                                                        <div class="col-7 mt-2">
+                                                            <a href="show-news.html">
+                                                                <p class="style-tittle text-p font_13 line-height-text mb-1">
+                                                                    اکتشافات مهم تاریخی که جهان را در حیرت فرو برد + تصاویر
+                                                                </p>
+                                                            </a>
+                                                            <p class="text-p font_13 line-height-text">
+                                                                از لشکر سفالین گرفته تا انسان فلورسی، این‌ها از جمله اکتشافاتی هستند که متخصصان معتقدند حتی جایگاهی مهمتر از مقبره توت‌عنخ‌آمون دارند....
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="row">
+                                <div class="col-lg-12 col-md-6">
+                                    <div class="mt-3">
+                                        <div class="bg-white-cat">
+                                            <div class="px-3">
+                                                <a href="#">
+                                                    <div class="row">
+                                                        <div class="col-12 mt-3 ">
+                                                            <div class="bg-style-more-see ">
+                                                                <div class="circle-more-see"></div>
+                                                                <span class="end-news">پربازدید ترین ها</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <div class="py-2">
+                                                            <a href="show-news.html">
+                                                                <span class="font_133 color-text">
+                                    بازداشت یکی از عوامل اصلی شبکه تروریستی سعودی اینترنشنال در ایران
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="py-2">
+                                                            <a href="show-news.html">
+                                                                <span class="font_13 color-text">
+                                    بازداشت یکی از عوامل اصلی شبکه تروریستی سعودی اینترنشنال در ایران
+                                                            </span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="py-2">
+                                                            <a href="show-news.html">
+                                                                <span class="font_13 color-text">
+                                    بازداشت یکی از عوامل اصلی شبکه تروریستی سعودی اینترنشنال در ایران
+                                                            </span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="py-2">
+                                                            <a href="show-news.html">
+                                                                <span class="font_13 color-text">
+                                    بازداشت یکی از عوامل اصلی شبکه تروریستی سعودی اینترنشنال در ایران
+                                                            </span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="py-2">
+                                                            <a href="show-news.html">
+                                                                <span class="font_13 color-text">
+                                    بازداشت یکی از عوامل اصلی شبکه تروریستی سعودی اینترنشنال در ایران
+                                                            </span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="py-2">
+                                                            <a href="show-news.html">
+                                                                <span class="font_3 color-text">
+                                    بازداشت یکی از عوامل اصلی شبکه تروریستی سعودی اینترنشنال در ایران
+                                                            </span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="py-2">
+                                                            <a href="show-news.html">
+                                                                <span class="font_13 color-text">
+                                    بازداشت یکی از عوامل اصلی شبکه تروریستی سعودی اینترنشنال در ایران
+                                                            </span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="py-2">
+                                                            <a href="show-news.html">
+                                                                <span class="font_3 color-text">
+                                    بازداشت یکی از عوامل اصلی شبکه تروریستی سعودی اینترنشنال در ایران
+                                                            </span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="py-2">
+                                                            <a href="show-news.html">
+                                                                <span class="font_13 color-text">
+                                    بازداشت یکی از عوامل اصلی شبکه تروریستی سعودی اینترنشنال در ایران
+                                                            </span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-md-6">
+
+                                    <div class="mt-3">
+                                        <div class="bg-white-cat">
+                                            <div class="px-3">
+                                                <a href="#">
+                                                    <div class="row">
+                                                        <div class="col-12 mt-3 ">
+                                                            <div class="bg-style-more-see ">
+                                                                <div class="circle-more-see"></div>
+                                                                <span class="end-news">پربحث ترین ها</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <div class="py-2">
+                                                            <a href="show-news.html">
+                                                                <span class="font_13 color-text line-height-text">
+                                    بازداشت یکی از عوامل اصلی شبکه تروریستی سعودی اینترنشنال در ایران
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="py-2">
+                                                            <a href="show-news.html">
+                                                                <span class="font_13 color-text line-height-text">
+                                    بازداشت یکی از عوامل اصلی شبکه تروریستی سعودی اینترنشنال در ایران
+                                                            </span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="py-2">
+                                                            <a href="show-news.html">
+                                                                <span class="font_13 color-text line-height-text">
+                                    بازداشت یکی از عوامل اصلی شبکه تروریستی سعودی اینترنشنال در ایران
+                                                            </span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="py-2">
+                                                            <a href="show-news.html">
+                                                                <span class="font_13 color-text line-height-text">
+                                    بازداشت یکی از عوامل اصلی شبکه تروریستی سعودی اینترنشنال در ایران
+                                                            </span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="py-2">
+                                                            <a href="show-news.html">
+                                                                <span class="font_13 color-text line-height-text">
+                                    بازداشت یکی از عوامل اصلی شبکه تروریستی سعودی اینترنشنال در ایران
+                                                            </span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="py-2">
+                                                            <a href="show-news.html">
+                                                                <span class="font_13 color-text line-height-text">
+                                    بازداشت یکی از عوامل اصلی شبکه تروریستی سعودی اینترنشنال در ایران
+                                                            </span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="py-2">
+                                                            <a href="show-news.html">
+                                                                <span class="font_13 color-text line-height-text">
+                                    بازداشت یکی از عوامل اصلی شبکه تروریستی سعودی اینترنشنال در ایران
+                                                            </span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="py-2">
+                                                            <a href="show-news.html">
+                                                                <span class="font_13 color-text line-height-text">
+                                    بازداشت یکی از عوامل اصلی شبکه تروریستی سعودی اینترنشنال در ایران
+                                                            </span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="py-2">
+                                                            <a href="show-news.html">
+                                                                <span class="font_13 color-text line-height-text">
+                                    بازداشت یکی از عوامل اصلی شبکه تروریستی سعودی اینترنشنال در ایران
+                                                            </span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-12">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-6 mt-3 mt-lg-0">
+                            <div class="bg-style-title">
+                                <div class="text-p">
+                                    <div class="circle-title2"></div>
+                                    <span class="font_13 style-tittle ">
+                                       پیشخوان
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="sticky-top col_z_index">
+
+                                <div class="style-text p-2 ">
+                                    <div class="row">
+                                        <div class="col-5">
+                                            <a href="show-news.html" class="img-read-news">
+                                                <img src="{% static 'web/img/16614539_535.jpg' %}"class="img-fluid">
+                                            </a>
+                                        </div>
+
+                                        <div class="col-7 pr-0">
+                                            <a href="show-news.html" class="text-p mt-2">
+                                                <p class="font_13 mt-1 ">
+                                                    لیست بازیکنان دعوت شده به تیم ملی
+                                                </p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="style-text p-2 ">
+                                    <div class="row">
+                                        <div class="col-5">
+                                            <a href="show-news.html" class="img-read-news">
+                                                <img src="{% static 'web/img/16806787_820.jpg' %}"class="img-fluid">
+                                            </a>
+                                        </div>
+
+                                        <div class="col-7 pr-0">
+                                            <a href="show-news.html" class="text-p mt-2">
+                                                <p class="font_13 mt-1 ">
+                                                    سرمربی پیشین تیم ملی چشم در چشم مرگ/ دیگر زورم به بیماری نمی‌رسد                                                </p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="style-text p-2 ">
+                                    <div class="row">
+                                        <div class="col-5">
+                                            <a href="show-news.html" class="img-read-news">
+                                                <img src="{% static 'web/img/16839760_164.jpg' %}"class="img-fluid">
+                                            </a>
+                                        </div>
+
+                                        <div class="col-7 pr-0">
+                                            <a href="show-news.html" class="text-p mt-2">
+                                                <p class="font_13 mt-1 ">
+                                                    پیراهن تیم ملی برای جام جهانی قطر مشخص شد + عکس
+                                                </p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="style-text p-2 ">
+                                    <div class="row">
+                                        <div class="col-5">
+                                            <a href="show-news.html" class="img-read-news">
+                                                <img src="{% static 'web/img/16856183_354.jfif' %}" class="img-fluid">
+                                            </a>
+                                        </div>
+
+                                        <div class="col-7 pr-0">
+                                            <a href="show-news.html" class="text-p mt-2">
+                                                <p class="font_13 mt-1 ">
+                                                    دسته گل‌هایی که صاحب پروژه گل به آب داد                                                </p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="style-text p-2 ">
+                                    <div class="row">
+                                        <div class="col-5">
+                                            <a href="show-news.html" class="img-read-news">
+                                                <img src="{% static 'web/img/16839761_561.jpg' %}" class="img-fluid">
+                                            </a>
+                                        </div>
+
+                                        <div class="col-7 pr-0">
+                                            <a href="show-news.html" class="text-p mt-2">
+                                                <p class="font_13 mt-1 ">
+                                                    شرط معافیت ملی پوشان از خدمت سربازی مشخص شد
+
+                                                </p>
+
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-12 col-md-6">
+                            <div class="mt-3">
+                                <div class="bg-white-cat">
+                                    <div class="px-3">
+                                        <a href="#">
+                                            <div class="row">
+                                                <div class="col-12 mt-3 ">
+                                                    <div class="bg-style-more-see ">
+                                                        <div class="circle-more-see"></div>
+                                                        <span class="end-news">آخرین اخبار</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="py-2">
+                                                    <a href="show-news.html">
+                                                                <span class="font_13 color-text line-height-text">
+                                    بازداشت یکی از عوامل اصلی شبکه تروریستی سعودی اینترنشنال در ایران
+                                                                </span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="py-2">
+                                                    <a href="show-news.html">
+                                                                <span class="font_13 color-text line-height-text">
+                                    بازداشت یکی از عوامل اصلی شبکه تروریستی سعودی اینترنشنال در ایران
+                                                            </span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="py-2">
+                                                    <a href="show-news.html">
+                                                                <span class="font_13 color-text line-height-text">
+                                    بازداشت یکی از عوامل اصلی شبکه تروریستی سعودی اینترنشنال در ایران
+                                                            </span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="py-2">
+                                                    <a href="show-news.html">
+                                                                <span class="font_13 color-text line-height-text">
+                                    بازداشت یکی از عوامل اصلی شبکه تروریستی سعودی اینترنشنال در ایران
+                                                            </span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="py-2">
+                                                    <a href="show-news.html">
+                                                                <span class="font_13 color-text line-height-text">
+                                    بازداشت یکی از عوامل اصلی شبکه تروریستی سعودی اینترنشنال در ایران
+                                                            </span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="py-2">
+                                                    <a href="show-news.html">
+                                                                <span class="font_13 color-text line-height-text">
+                                    بازداشت یکی از عوامل اصلی شبکه تروریستی سعودی اینترنشنال در ایران
+                                                            </span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="py-2">
+                                                    <a href="show-news.html">
+                                                                <span class="font_13 color-text line-height-text">
+                                    بازداشت یکی از عوامل اصلی شبکه تروریستی سعودی اینترنشنال در ایران
+                                                            </span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="py-2">
+                                                    <a href="show-news.html">
+                                                                <span class="font_13 color-text line-height-text">
+                                    بازداشت یکی از عوامل اصلی شبکه تروریستی سعودی اینترنشنال در ایران
+                                                            </span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="py-2">
+                                                    <a href="show-news.html">
+                                                                <span class="font_13 color-text line-height-text">
+                                    بازداشت یکی از عوامل اصلی شبکه تروریستی سعودی اینترنشنال در ایران
+                                                            </span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="bg-white-content ">
+            <div class="p-3">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="bg-video">
+                            <div class="row">
+                                <div class="col-6">
+                                    <div style="text-align: right">
+                                        <span class="color-teldio font_15">تلدیو</span>
+                                    </div>
+                                </div>
+
+                                <div class="col-6">
+                                    <div style="text-align: left">
+                                        <a href="#">
+                                            <span class="color-video font_15">مشاهده همه ویدیو ها</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-6 order-2">
+                        <div class="row">
+                            <div class="col-12 mt-3">
+                                <div class="style-text">
+                                    <div class="row">
+                                        <div class="col-4 pl-0">
+                                            <a href="show-news.html" class="img-news-teldio">
+                                                <img src="{% static 'web/img/16851463_218.jpg' %}"class="img-fluid">
+                                            </a>
+                                        </div>
+                                        <div class="col-8 mt-3">
+                                            <a href="show-news.html">
+                                                <p class=" text-p font_16 mb-1">
+                                                    تاثیر کود شیمیایی بر رفتار زنبورها + فیلم
+                                                </p>
+                                            </a>
+                                            <p class="text-p font_13 mt-3">
+                                                20.آبان.1401
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 mt-3">
+                                <div class="style-text">
+                                    <div class="row">
+                                        <div class="col-4 pl-0">
+                                            <a href="show-news.html" class="img-news-teldio">
+                                                <img src="{% static 'web/img/16853061_351.jfif' %}" class="img-fluid">
+                                            </a>
+
+                                        </div>
+                                        <div class="col-8  mt-3">
+                                            <a href="show-news.html">
+                                                <p class=" text-p font_16 mb-1">
+                                                    رونمایی از دهکده هواداران جام جهانی در قطر + فیلم
+                                                </p>
+                                            </a>
+                                            <p class="text-p font_13 mt-3">
+                                                20.آبان.1401
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 mt-3">
+                                <div class="style-text">
+                                    <div class="row">
+                                        <div class="col-4 pl-0">
+                                            <a href="show-news.html" class="img-news-teldio">
+                                                <img src="{% static 'web/img/16851452_968.jpg' %}"class="img-fluid">
+                                            </a>
+                                        </div>
+                                        <div class="col-8  mt-3">
+                                            <a href="show-news.html">
+                                                <p class=" text-p font_16 mb-1">
+                                                    راهکارهای پیشگیرانه از زانو درد در سالمندی + فیلم
+                                                </p>
+                                            </a>
+                                            <p class="text-p font_13 mt-3">
+                                                20.آبان.1401
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 mt-3">
+                                <div class="style-text">
+                                    <div class="row">
+                                        <div class="col-4 pl-0">
+                                            <a href="show-news.html" class="img-news-teldio">
+                                                <img src="{% static 'web/img/16845900_642.jpg' %}"class="img-fluid">
+                                            </a>
+                                        </div>
+                                        <div class="col-8  mt-3">
+                                            <a href="show-news.html">
+                                                <p class=" text-p font_16 mb-1">
+                                                    دستگیری سارقانی که از دزدی خود فیلم می‌گرفتند + فیلم
+                                                </p>
+                                            </a>
+                                            <p class="text-p font_13 mt-3">
+                                                20.آبان.1401
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 order-1">
+                        <div class="row">
+                            <div class="col-12 mt-3">
+                                <div class="style-text">
+                                    <div class="row">
+                                        <div class="col-lg-12 col-md-6 col-12">
+                                            <a href="show-news.html" class="img-news-teldio">
+                                                <img src="{% static 'web/img/16853409_138.jfif' %}" class="img-fluid">
+                                            </a>
+                                        </div>
+                                        <div class="col-lg-12 col-md-6 col-12 mt-3">
+                                            <a href="show-news.html">
+                                                <div class="circle-title"></div>
+                                                <p class=" text-p font_16 mb-1 style-tittle">
+                                                    نحوه استفاده درست از فضای مجازی + فیلم
+                                                </p>
+                                            </a>
+                                            <p class="text-p font_13 mt-2" style="color: #000">
+                                                فضای مجازی به عنوان ابزار ارتباطی نوین مانند تیغ دو لبه‌ای است که طرز صحیح استفاده از آن را باید آموخت.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="mt-5">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-12">
+                                <div style="text-align: right">
+                                    <div class="circle-title"></div>
+                                    <span class="color-ax-rooz font_18">از نگاه شما</span>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-3 col-6">
+                        <div class="row">
+                            <div class="col-12 mt-3">
+                                <div class="style-text">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <a href="show-news.html" class="img-news-teldio">
+                                                <img src="{% static 'web/img/16837679_923.jpg' %}"class="img-fluid">
+                                            </a>
+
+                                        </div>
+                                        <div class="col-12  mt-3">
+
+                                            <a href="show-news.html">
+                                                <div class="circle-title"></div>
+
+                                                <p class=" text-p font_14 mb-1 style-tittle line-height-text">
+                                                    دستگیری بیش از ۶۰۰ سارق در طرح رعد پلیس پایتخت
+                                                </p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="row">
+                            <div class="col-12 mt-3">
+                                <div class="style-text">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <a href="show-news.html" class="img-news-teldio">
+                                                <img src="{% static 'web/img/16849571_274.jpg' %}"class="img-fluid">
+                                            </a>
+
+                                        </div>
+                                        <div class="col-12  mt-3">
+
+                                            <a href="show-news.html">
+                                                <div class="circle-title"></div>
+
+                                                <p class=" text-p font_14 mb-1 style-tittle line-height-text">
+                                                    طعم زندگی در بازار روز بندر انزلی
+                                                </p>
+                                            </a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="row">
+                            <div class="col-12 mt-3">
+                                <div class="style-text">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <a href="show-news.html" class="img-news-teldio">
+                                                <img src="{% static 'web/img/16851160_479.jpg' %}"class="img-fluid">
+                                            </a>
+
+                                        </div>
+                                        <div class="col-12  mt-3">
+
+                                            <a href="show-news.html">
+                                                <div class="circle-title"></div>
+
+                                                <p class=" text-p font_14 mb-1 style-tittle line-height-text">
+                                                    رقابت‌های انتخابی جام جهانی بسکتبال ۲۰۲۳ / ایران ۷۲ - چین ۸۱
+                                                </p>
+                                            </a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="row">
+                            <div class="col-12 mt-3">
+                                <div class="style-text">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <a href="show-news.html" class="img-news-teldio">
+                                                <img src="{% static 'web/img/16845068_325.jpg' %}"class="img-fluid">
+                                            </a>
+
+                                        </div>
+                                        <div class="col-12  mt-3">
+
+                                            <a href="show-news.html">
+                                                <div class="circle-title"></div>
+
+                                                <p class=" text-p font_14 mb-1 style-tittle line-height-text">
+                                                    یادمان شهدای حرم شاهچراغ (ع)
+                                                </p>
+                                            </a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--end content-->
+
+
+
+
+
+<!--begin footer-->
+
+<section class="bg-color-gray ">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 d-md-inline-block d-none">
+                <nav class="navbar navbar-expand-md navbar-dark ">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#collapsibleNavbar">
+                        <span class="navbar-toggler-icon d-none"></span>
+                    </button>
+
+                    <div class="navbar-brand d-none " href="#">
+                        <i class="fa fa-search mt-2 ml-2 red_social"></i>
+                    </div>
+
+                    <div class="collapse navbar-collapse" >
+                        <ul class="footer_menu navbar-nav font_13 pr-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#" style="color: #000">پخش زنده</a>
+                            </li>
+                            <li class="nav-item color-menu-footer">
+                                <a class="nav-link " href="#" style="color: #000">آرشیو</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="#" style="color: #000">پیوند ها</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="#" style="color: #000">خبرنامه</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="#" style="color: #000">آب و هوا</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="#" style="color: #000">اوقات شرعی</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="#" style="color: #000">نظرسنجی </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="about-us.html" style="color: #000">درباره ما </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="contact.html" style="color: #000">تماس با ما </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="#" style="color: #000">نقشه سایت </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="#" style="color: #000">RSS </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="navbar-brand d-none d-lg-inline-block ">
+
+                        <div class="top-search-footer ">
+                            <form method="get" action="search">
+                                <input name="serch" type="text" class="form-control" placeholder="جستجو">
+                                <button type="button" name="button" class="bg-search">
+                                    <i class="fa fa-search icon-header-color "></i>
+                                </button>
+                            </form>
+                        </div>
+
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 d-md-inline-block d-none ">
+                <div class="row">
+                    <div class="col-2 mt-5">
+                        <a href="category.html" class="style-title-footer">
+                            خبرگزاری اردیبهشت خبر
+                        </a>
+                        <ul class="px-0 mt-2 line-height-footer" style="list-style: none">
+                            <li class="">
+                                <a href="#" class="hover-txt-footer">
+                                    عناوین کل خبر
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="#" class="hover-txt-footer">
+                                    آرشیو
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="#" class="hover-txt-footer">
+                                    صدای مردم
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-2 mt-5">
+                        <a href="category.html" class="style-title-footer">
+                            بین الملل
+                        </a>
+                        <ul class="px-0 mt-2 line-height-footer" style="list-style: none">
+                            <li class="">
+                                <a href="#" class="hover-txt-footer">
+                                    بین الملل
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="#" class="hover-txt-footer">
+                                    ایران
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="#" class="hover-txt-footer">
+                                    خاور میانه
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-2 mt-5">
+                        <a href="category.html" class="style-title-footer">
+                            سیاسی
+                        </a>
+                        <ul class="px-0 mt-2 line-height-footer" style="list-style: none">
+                            <li class="">
+                                <a href="#" class="hover-txt-footer">
+                                    ورزشی
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="#" class="hover-txt-footer">
+                                    فوتبال و فوتسال
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="#" class="hover-txt-footer">
+                                    توپ و تور
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-2 mt-5">
+                        <a href="category.html" class="style-title-footer">
+                            اجتماعی
+                        </a>
+                        <ul class="px-0 mt-2 line-height-footer" style="list-style: none">
+                            <li class="">
+                                <a href="#" class="hover-txt-footer">
+                                    شهری
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="#" class="hover-txt-footer">
+                                    حوادث و انتظامی
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="#" class="hover-txt-footer">
+                                    رفاه و تعاون
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-2 mt-5">
+                        <a href="category.html" class="style-title-footer">
+                            اقتصادی
+                        </a>
+                        <ul class="px-0 mt-2 line-height-footer" style="list-style: none">
+                            <li class="">
+                                <a href="#" class="hover-txt-footer">
+                                    بانک و بیمه
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="#" class="hover-txt-footer">
+                                    بورس
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="#" class="hover-txt-footer">
+                                    صنعت، تجارتو کشاورزس
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-2 mt-5">
+                        <a href="category.html" class="style-title-footer">
+                            فرهنگی هنری
+                        </a>
+                        <ul class="px-0 mt-2 line-height-footer" style="list-style: none">
+                            <li class="">
+                                <a href="#" class="hover-txt-footer">
+                                    رادیو تلویزیون
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="#" class="hover-txt-footer">
+                                    سینما و تئاتر
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="#" class="hover-txt-footer">
+                                    موسیقی و هنر های تجسمی
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-2 mt-5">
+                        <a href="category.html" class="style-title-footer">
+                            علمی و پزشکی
+                        </a>
+                        <ul class="px-0 mt-2 line-height-footer" style="list-style: none">
+                            <li class="">
+                                <a href="#" class="hover-txt-footer">
+                                    دانشگاه و کنکور
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="#" class="hover-txt-footer">
+                                    آموزش و پرورش
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="#" class="hover-txt-footer">
+                                    بهداشت و درمان
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-2 mt-5">
+                        <a href="category.html" class="style-title-footer">
+                            فیلم و صوت
+                        </a>
+                        <ul class="px-0 mt-2 line-height-footer" style="list-style: none">
+                            <li class="">
+                                <a href="#" class="hover-txt-footer">
+                                    فیلم و صوت
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="#" class="hover-txt-footer">
+                                    گزارش استان ها
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="#" class="hover-txt-footer">
+                                    10:10
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-2 mt-5">
+                        <a href="category.html" class="style-title-footer">
+                            عکس
+                        </a>
+                        <ul class="px-0 mt-2 line-height-footer" style="list-style: none">
+                            <li class="">
+                                <a href="#" class="hover-txt-footer">
+                                    خبری
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="#" class="hover-txt-footer">
+                                    استان ها
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="#" class="hover-txt-footer">
+                                    مستند
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-2 mt-5">
+                        <a href="category.html" class="style-title-footer">
+                            استان ها
+                        </a>
+                        <ul class="px-0 mt-2 line-height-footer" style="list-style: none">
+                            <li class="">
+                                <a href="#" class="hover-txt-footer">
+                                    استان ها
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="#" class="hover-txt-footer">
+                                    عناوین کل استان ها
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-2 mt-5">
+                        <a href="category.html" class="style-title-footer">
+                            شهروند خبر نگار
+                        </a>
+                        <ul class="px-0 mt-2 line-height-footer" style="list-style: none">
+                            <li class="">
+                                <a href="#" class="hover-txt-footer">
+                                    شهروند خبرنگار
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="#" class="hover-txt-footer">
+                                    عناوین کل شهروند خبر نگار
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="col-2 mt-5">
+                        <a href="category.html" class="style-title-footer">
+                            وب گردی
+                        </a>
+                        <ul class="px-0 mt-2 line-height-footer" style="list-style: none">
+                            <li class="">
+                                <a href="#" class="hover-txt-footer">
+                                    وب گردی
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="#" class="hover-txt-footer">
+                                    خواندنی ها
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="#" class="hover-txt-footer">
+                                    مجله سرگرمی
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="border-top-footer">
+            <div class="row">
+
+                <div class="col-md-6 col-12 text-md-right text-center">
+                    <div class="style-li">
+                        <ul style="list-style: none" class="p-0">
+                            <li>
+                                <a href="#" class="">
+                                    <i class="fab fa-twitter color-media"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="">
+                                    <i class="fab fa-instagram color-media"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="">
+                                    <i class="fab fa-telegram color-media"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="">
+                                    <i class="fab fa-android color-media"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="">
+                                    <i class="fa fa-search-plus color-media"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="">
+                                    <i class="fab fa-whatsapp color-media"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="">
+                                    <i class="fa fa-wifi color-media"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-12 text-center ">
+                    <div style="text-align: left" class="mt-1">
+                        <span class="font_12">
+                            THE WORLD'S LARGEST
+                            <span style="color: #e00000">
+                                PERSIAN
+                            </span>
+                            LANGUAGE NEWS AGENCY
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="bg-footer">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-12  col-md-6">
+                    <div class="text-center text-md-right font_13 font-weight-bold">
+
+                        کلیه حقوق این سایت متعلق به خبرگزاری اردیبهشت خبر بوده و استفاده از مطالب آن با ذکر منبع بلامانع است.
+
+                    </div>
+                </div>
+
+                <div class="col-12  col-md-6">
+                    <div class="text-center text-md-left font_13 font-weight-bold mt-2 mt-md-0">
+
+                        طراحی وتولید توسط
+                        <a href="https://hircana.com">هیرکانا</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--end footer-->
+
+
+
+<div class="scrolltop" onclick="scroll_top()">
+    <i class="fa fa-chevron-up arrow_icon" style="color: #333"></i>
+</div>
+
+
+
+
+<script src="{% static 'web/js/jquery.2.1.0.min.js' %}" type="text/javascript"></script>
+<script src="{% static 'web/js/popper.min.js' %}" type="text/javascript"></script>
+<script src="{% static 'web/js/bootstrap.min.js' %}" type="text/javascript"></script>
+<script src="{% static 'web/js/bootstrap.bundle.min.js' %}" type="text/javascript"></script>
+<script src="{% static 'web/js/owl.carousel.js' %}"></script>
+<script src="{% static 'web/js/js.js' %}" type="text/javascript"></script>
+
+</body>
+</html>
