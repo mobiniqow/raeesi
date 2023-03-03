@@ -337,27 +337,28 @@
                         <div class="col-lg-8 ">
                             <div class="row ">
                                 <div class="col-12">
-                                    <div class="border-bottom py-3">
+                                    {% for i in posts %}
+                                        <div class="border-bottom py-3">
                                         <div class="row">
                                             <div class="col-12">
                                                 <div class="style-text">
                                                     <div class="row">
                                                         <div class="col-3 pl-0">
                                                             <a href="show-news.html" class="img-news-bartar">
-                                                                <img src="{% static 'web/img/16844818_421.jpg' %}"class="img-fluid">
+                                                                <img src="{{i.picture.url}}" class="img-fluid">
                                                             </a>
 
                                                         </div>
                                                         <div class="col-9  mt-2 line-height-text">
-                                                            <p class=" font_13 text-p mb-1">شهردار تهران در گفت و گو با خبرگزاری اردیبهشت خبر مطرح کرد:</p>
+                                                            <p class=" font_13 text-p mb-1">{{ i.title }}</p>
 
-                                                            <a href="show-news.html">
-                                                                <p class="style-tittle text-p font_13 mb-1 line-height-text">
-                                                                    پیش بینی کاکا از قهرمان و پدیده جام جهانی
-                                                                </p>
-                                                            </a>
+{#                                                            <a href="show-news.html">#}
+{#                                                                <p class="style-tittle text-p font_13 mb-1 line-height-text">#}
+{#                                                                    پیش بینی کاکا از قهرمان و پدیده جام جهانی#}
+{#                                                                </p>#}
+{#                                                            </a>#}
                                                             <p class="text-p font_13 line-height-text">
-                                                                ستاره سابق برزیل پیش بینی خود را از شانس اول قهرمانی و پدیده جام جهانی ۲۰۲۲ اعلام کرد...
+                                                                {{ i.content|safe|stringformat:'.20s' }}
                                                             </p>
                                                         </div>
                                                     </div>
@@ -365,265 +366,9 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="border-bottom py-3">
-                                        <div class="row">
-                                            <div class="col-12">
-                                                <div class="style-text">
-                                                    <div class="row">
-                                                        <div class="col-3 pl-0">
-                                                            <a href="show-news.html" class="img-news-bartar">
-                                                                <img src="{% static 'web/img/16845521_780.jpg' %}"class="img-fluid">
-                                                            </a>
-
-                                                        </div>
-                                                        <div class="col-9  mt-2">
-
-
-                                                            <a href="show-news.html">
-                                                                <p class="style-tittle text-p font_13 line-height-text mb-1">
-                                                                    اکتشافات مهم تاریخی که جهان را در حیرت فرو برد + تصاویر
-                                                                </p>
-                                                            </a>
-                                                            <p class="text-p font_13 line-height-text">
-                                                                از لشکر سفالین گرفته تا انسان فلورسی، این‌ها از جمله اکتشافاتی هستند که متخصصان معتقدند حتی جایگاهی مهمتر از مقبره توت‌عنخ‌آمون دارند....
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="border-bottom py-3">
-                                        <div class="row">
-                                            <div class="col-12">
-                                                <div class="style-text">
-                                                    <div class="row">
-                                                        <div class="col-3 pl-0">
-                                                            <a href="show-news.html" class="img-news-bartar">
-                                                                <img src="{% static 'web/img/16844954_295.jpg' %}"class="img-fluid">
-                                                            </a>
-
-                                                        </div>
-                                                        <div class="col-9  mt-2">
-
-                                                            <a href="show-news.html">
-                                                                <p class="style-tittle text-p font_13 line-height-text mb-1">
-
-                                                                    ورود سامانه جدید بارشی به کشور
-
-                                                                </p>
-                                                            </a>
-                                                            <p class="text-p font_13 line-height-text">
-                                                                براساس نقشه‌های هواشناسی با ورود سامانه بارشی از جنوب غرب، بارش‌ها در غرب و جنوب غرب تشدید می‌شود....
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="border-bottom py-3">
-                                        <div class="row">
-                                            <div class="col-12">
-                                                <div class="style-text">
-                                                    <div class="row">
-                                                        <div class="col-3 pl-0">
-                                                            <a href="show-news.html" class="img-news-bartar">
-                                                                <img src="{% static 'web/img/16844900_986.jpg' %}"class="img-fluid">
-                                                            </a>
-
-                                                        </div>
-                                                        <div class="col-9 mt-2">
-                                                            <p class=" font_13 text-p mb-1 line-height-text">خبرگزاری اردیبهشت خبر گزارش می دهد؛</p>
-
-                                                            <a href="show-news.html">
-                                                                <p class="style-tittle text-p font_13 mb-1 line-height-text">
-                                                                    بابلرود کشتی ها را می بلعد + فیلم
-                                                                </p>
-                                                            </a>
-                                                            <p class="text-p font_13 line-height-text">
-
-                                                                ناقوس مرگ بابلرود یکی از رود‌های بزرگ شمال کشور با انباشت ۲ میلیون متر مکعب رسوبات نواخته شده است.
-                                                                ....
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="border-bottom py-3">
-                                        <div class="row">
-                                            <div class="col-12">
-                                                <div class="style-text">
-                                                    <div class="row">
-                                                        <div class="col-3 pl-0">
-                                                            <a href="show-news.html" class="img-news-bartar">
-                                                                <img src="{% static 'web/img/16846059_100.jpg' %}"class="img-fluid">
-                                                            </a>
-
-                                                        </div>
-                                                        <div class="col-9 mt-2">
-
-                                                            <a href="show-news.html">
-                                                                <p class="style-tittle text-p font_13 line-height-text mb-1">
-                                                                    شوخی کی روش با وزیر ورزش
-                                                                </p>
-                                                            </a>
-                                                            <p class="text-p font_13 line-height-text">
-                                                                کارلوس کی روش در حاشیه اردوی تیم ملی که با حضور سجادی برگزار شد با وزیر ورزش و‌ ملی پوشان شوخی کرد...
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="border-bottom py-3">
-                                        <div class="row">
-                                            <div class="col-12">
-                                                <div class="style-text">
-                                                    <div class="row">
-                                                        <div class="col-3 pl-0">
-                                                            <a href="show-news.html" class="img-news-bartar">
-                                                                <img src="{% static 'web/img/16844900_986.jpg' %}"class="img-fluid">
-                                                            </a>
-
-                                                        </div>
-                                                        <div class="col-9 mt-2">
-                                                            <p class=" font_13 line-height-text text-p mb-1">خبرگزاری اردیبهشت خبر گزارش می دهد؛</p>
-
-                                                            <a href="show-news.html">
-                                                                <p class="style-tittle text-p font_13 line-height-text mb-1">
-                                                                    بابلرود کشتی ها را می بلعد + فیلم
-                                                                </p>
-                                                            </a>
-                                                            <p class="text-p font_13 line-height-text">
-
-                                                                ناقوس مرگ بابلرود یکی از رود‌های بزرگ شمال کشور با انباشت ۲ میلیون متر مکعب رسوبات نواخته شده است.
-                                                                ....
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="border-bottom py-3">
-                                        <div class="row">
-                                            <div class="col-12">
-                                                <div class="style-text">
-                                                    <div class="row">
-                                                        <div class="col-3 pl-0">
-                                                            <a href="show-news.html" class="img-news-bartar">
-                                                                <img src="{% static 'web/img/16846059_100.jpg' %}" class="img-fluid">
-                                                            </a>
-
-                                                        </div>
-                                                        <div class="col-9 mt-2">
-
-                                                            <a href="show-news.html">
-                                                                <p class="style-tittle text-p line-height-text font_13 mb-1">
-                                                                    شوخی کی روش با وزیر ورزش
-                                                                </p>
-                                                            </a>
-                                                            <p class="text-p line-height-text font_13">
-                                                                کارلوس کی روش در حاشیه اردوی تیم ملی که با حضور سجادی برگزار شد با وزیر ورزش و‌ ملی پوشان شوخی کرد...
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="border-bottom py-3">
-                                        <div class="row">
-                                            <div class="col-12">
-                                                <div class="style-text">
-                                                    <div class="row">
-                                                        <div class="col-3 pl-0">
-                                                            <a href="show-news.html" class="img-news-bartar">
-                                                                <img src="{% static 'web/img/16845811_405.jfif' %}" class="img-fluid">"
-                                                            </a>
-
-                                                        </div>
-                                                        <div class="col-9 mt-2">
-                                                            <p class=" font_13 line-height-text text-p mb-1">کارشناس اروپایی:</p>
-
-                                                            <a href="show-news.html">
-                                                                <p class="style-tittle text-p font_13 line-height-text mb-1">
-                                                                    انتخابات هم نمی‌تواند اختلافات ریشه‌ای در آمریکا را حل و فصل کند
-                                                                </p>
-                                                            </a>
-                                                            <p class="text-p font_13 line-height-text">
-
-                                                                انتخابات میان دوره‌ای آمریکا به خوبی نشان داد که ریشه اختلافات در داخل این کشور پیچیده‌تر از آن است که به راحتی حل شود.
-                                                                ...
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="border-bottom py-3">
-                                        <div class="row">
-                                            <div class="col-12">
-                                                <div class="style-text">
-                                                    <div class="row">
-                                                        <div class="col-3 pl-0">
-                                                            <a href="show-news.html" class="img-news-bartar">
-                                                                <img src="{% static 'web/img/16844818_421.jpg' %}"class="img-fluid">
-                                                            </a>
-
-                                                        </div>
-                                                        <div class="col-9 mt-2">
-                                                            <p class=" font_13 line-height-text text-p mb-1">شهردار تهران در گفت و گو با خبرگزاری اردیبهشت خبر مطرح کرد:</p>
-
-                                                            <a href="show-news.html">
-                                                                <p class="style-tittle text-p font_13 line-height-text mb-1">
-                                                                    پیش بینی کاکا از قهرمان و پدیده جام جهانی
-                                                                </p>
-                                                            </a>
-                                                            <p class="text-p font_13 line-height-text">
-                                                                ستاره سابق برزیل پیش بینی خود را از شانس اول قهرمانی و پدیده جام جهانی ۲۰۲۲ اعلام کرد...
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="border-bottom py-3">
-                                        <div class="row">
-                                            <div class="col-12">
-                                                <div class="style-text">
-                                                    <div class="row">
-                                                        <div class="col-3 pl-0">
-                                                            <a href="show-news.html" class="img-news-bartar">
-                                                                <img src="{% static 'web/img/16845521_780.jpg' %}"class="img-fluid">
-                                                            </a>
-
-                                                        </div>
-                                                        <div class="col-7 mt-2">
-                                                            <a href="show-news.html">
-                                                                <p class="style-tittle text-p font_13 line-height-text mb-1">
-                                                                    اکتشافات مهم تاریخی که جهان را در حیرت فرو برد + تصاویر
-                                                                </p>
-                                                            </a>
-                                                            <p class="text-p font_13 line-height-text">
-                                                                از لشکر سفالین گرفته تا انسان فلورسی، این‌ها از جمله اکتشافاتی هستند که متخصصان معتقدند حتی جایگاهی مهمتر از مقبره توت‌عنخ‌آمون دارند....
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
+                                    {% endfor %}
                                 </div>
                             </div>
-
                         </div>
                         <div class="col-lg-4">
                             <div class="row">

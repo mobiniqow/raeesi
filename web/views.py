@@ -1,11 +1,10 @@
 import random
 from collections import defaultdict
-
-from django.db.migrations import state
-from django.db.models import Count, Q
+from django.db.models import Q
+from django.shortcuts import get_object_or_404
 from django.views.generic import TemplateView
 
-from blog.models import SubCategory, Post, Comment
+from blog.models import SubCategory, Post, Comment, HashtagNew
 from contact.models import Settings, Part
 from web.models import Banners
 
@@ -16,25 +15,45 @@ class IndexView(TemplateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         users = defaultdict(list)
-        banners = Banners.objects.all()
+        top_banners = Banners.objects.filter(state=Banners.State.TOP_BANNER)
+        side_banners = list(Banners.objects.filter(state=Banners.State.SIDE_BANNER))
         posts = list(Post.objects.all().order_by('created_at'))
-        topposts = list(Post.objects.all().order_by('created_at'))
-        random_banner = random.choice(banners)
+        most_popular = list(Post.objects.all().order_by('views').order_by('created_at')[:10])
+        most_discuss = list(
+            Comment.objects.filter().order_by('post').order_by('created_at').values('post').distinct()[:10])
+        most_discuss = [x['post'] for x in most_discuss]
+        most_discuss = list(Post.objects.filter(pk__in=most_discuss))
+        for i in range(len(most_popular) - len(most_discuss)):
+            most_discuss.append(most_popular[i])
+        most_last = list(Comment.objects.filter().order_by('post').order_by('created_at').values('post')[:10])
+
+        most_last = [x['post'] for x in most_last]
+        most_last = list(Post.objects.filter(pk__in=most_last))
+        for i in range(len(most_popular) - len(most_last)):
+            most_last.append(most_popular[i])
+        most_choice = list(
+            Comment.objects.filter().order_by('post').order_by('created_at').values('post')[:10])
+
+        most_choice = [x['post'] for x in most_choice]
+        most_choice = list(Post.objects.filter(pk__in=most_choice))
+        for i in range(len(most_popular) - len(most_choice)):
+            most_choice.append(most_popular[i])
+        top_banner = random.choice(top_banners)
+        side_banners = random.sample(side_banners, 2)
         top_posts = random.sample(posts, 3)
-        top8_posts = random.sample(topposts, 8)
-        top10_posts = random.sample(topposts, 10)
+        top8_posts = random.sample(posts, 8)
         for result in SubCategory.objects.values('parent__name', 'name', 'parent__id').annotate().order_by(
                 'parent__name', ):
             users[result['parent__name']].append(result)
         context['model'] = dict(users)
-        context['banner'] = random_banner
+        context['top_banner'] = top_banner
+        context['side_banners'] = side_banners
         context['top3'] = top_posts
         context['top8'] = top8_posts
-        context['top10popular'] = top10_posts
-        # por bahs tarin ha
-        context['top10discuss'] = top10_posts
-        context['top10choice'] = top10_posts
-        context['top10last'] = top10_posts
+        context['top10popular'] = most_popular
+        context['top10discuss'] = most_discuss
+        context['top10choice'] = most_choice
+        context['top10last'] = most_last
         top_day_news = Post.objects.order_by('views', 'created_at').last()
         top_day_views = Comment.objects.filter(post_id=top_day_news.id).count()
         context['top_day_news'] = top_day_news
@@ -73,11 +92,12 @@ class SearchView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        posts = Post.objects.all()
-        if 'value' in self.kwargs:
-            search_key = self.kwargs['value']
-            posts = posts.filter(Q(title__contains=search_key))
+        search_key = self.request.GET['search']
+        posts = Post.objects.filter(Q(title__contains=search_key))[:8]
+        hashtags = HashtagNew.objects.filter(post__in=posts).values('hashtag__name').distinct()[:4]
+        print(hashtags)
         context['posts'] = posts
+        context['hashtags'] = hashtags
         settings = Settings.objects.first()
         context['settings'] = settings
         return context
@@ -89,3 +109,17 @@ class CategoryView(TemplateView):
 
 class ShowNewsView(TemplateView):
     template_name = 'show-news.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        search_key = self.kwargs['id']
+        post = get_object_or_404(Post, id=search_key)
+        hashtags = HashtagNew.objects.filter(post_id=post.id).distinct()[:5]
+        relational = HashtagNew.objects.filter(hashtag_id__in=hashtags.values('hashtag_id')).exclude(
+            post_id__in=hashtags.values('post_id'))[:3]
+        offers = Post.objects.all().exclude(id=post.id).order_by('views')[:8]
+        context['model'] = post
+        context['hashtags'] = hashtags
+        context['relational'] = relational
+        context['offers'] = offers
+        return context

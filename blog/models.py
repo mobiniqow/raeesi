@@ -77,7 +77,7 @@ class HashtagNew(models.Model):
         verbose_name_plural = 'برچسب های پست'
 
     def __str__(self):
-        return self.post
+        return self.post.title
 
 
 class Comment(models.Model):

@@ -13,8 +13,9 @@ admin.site.register(SubCategory, SubCategoryAdmin)
 
 
 class PostAdmin(admin.ModelAdmin):
-    list_display = ('title', 'created_at','views','state')
+    list_display = ('id', 'title', 'created_at', 'views', 'state')
     list_filter = ('category',)
+    readonly_fields = ('views',)
 
 
 admin.site.register(Post, PostAdmin)
