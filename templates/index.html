@@ -12,27 +12,7 @@
     <link href="{% static 'web/css/hircana.css' %}" type="text/css" rel="stylesheet">
 </head>
 <body>
-<!--begin header -->
-{#<div class="container">#}
-{#    <div class="row">#}
-{#        <div class="col-12">#}
-{#            <span class="header-border-top p-1" style="color: #5e5e5e">#}
-{##}
-{#              <div id="digitalClock">11:17:19 <strong>AM</strong></div>#}
-{##}
-{#            </span>#}
-{#            <span>#}
-{#                <a href="#" class="header-btn-border">#}
-{#                    ایران#}
-{#                </a>#}
-{#            </span>#}
-{#        </div>#}
-{#    </div>#}
-{#</div>#}
-<!--end header -->
 
-
-<!--begin menu -->
 <div class="container">
 
     <div class="row ">
@@ -129,7 +109,7 @@
                                     <p class=" font_13 text-p line-height-text">{{ top3.1.title }}</p>
                                     <a href="/show-news/{{ top3.1.id }}" class="text-p">
                                         <div class="circle-title"></div>
-                                        <p class="font_13 style-tittle line-height-text">{{ top3.1.content| safe |stringformat:".20s" }}
+                                        <p class="font_13 style-tittle line-height-text">{{ top3.1.title| safe |stringformat:".20s" }}
                                         </p>
                                     </a>
                                 </div>
@@ -149,7 +129,7 @@
                                     <p class=" font_13 text-p line-height-text">{{ top3.2.title }}</p>
                                     <a href="/show-news/{{ top3.2.id }}" class="text-p">
                                         <div class="circle-title"></div>
-                                        <p class="font_13 style-tittle line-height-text">{{ top3.2.content| safe |stringformat:".20s" }}
+                                        <p class="font_13 style-tittle line-height-text">{{ top3.2.title| safe |stringformat:".20s" }}
                                         </p>
                                     </a>
                                 </div>
