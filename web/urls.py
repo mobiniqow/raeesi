@@ -9,4 +9,5 @@ urlpatterns = [
     path('search', SearchView.as_view(), name='search'),
     path('category', CategoryView.as_view(), name='category'),
     path('show-news/<int:id>', ShowNewsView.as_view(), name='show-news'),
+    path('comment/<int:post_id>', send_comment, name='comment'),
 ]
